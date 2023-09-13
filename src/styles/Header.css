@@ -1,0 +1,145 @@
+.inner{
+  width: 1300px;
+  margin: auto;
+  /* border: 1px solid black; */
+}
+.HeaderTop{
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  margin: 28px 0px 31px;
+}
+.HeaderTop .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HeaderTop .logo img{margin-right: 1rem;}
+.HeaderTop .logo i{
+  border: none;
+  font-size: 30px;
+}
+form{position: relative;}
+form input{
+  width: 400px;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0.8rem 0.2rem;
+}
+form .searchIcon{
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  color: #9c9c9c;
+}
+input:focus{outline: none;}
+input::placeholder{
+  color: #cacaca;
+  font-family: 'SUIT';
+  font-size: 0.9rem;
+}
+.HeaderTop .snb ul{
+  display: flex;
+}
+/* .HeaderTop .snb ul li:first-child{
+  border-right: 1px solid rgb(115, 115, 115);
+  padding-right: 1rem;
+} */
+.HeaderTop .snb ul li{
+  margin: 0 0.5rem;
+}
+.HeaderTop .snb ul li:first-child{
+  position: relative;
+  padding: 0 0.5rem;
+}
+.HeaderTop .snb ul li:first-child::after{
+  content: '';
+  position: absolute;
+  left: 103%;
+  top: 53%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 12px;
+  background-color: #9c9c9c;
+}
+.HeaderTop .snb ul li a{
+  font-size: 13px;
+  color: #1a1a1a;
+}
+.HeaderBottom{}
+.HeaderBottom .nav{
+  display: flex;
+}
+.HeaderBottom .nav li{
+  margin-right: 1rem;
+}
+.HeaderBottom .nav li a{
+  font-size: 18px;
+  color: #aaa;
+}
+.HeaderBottom .nav li a:hover{
+  color: #1a1a1a;
+}
+.nav li a.active{
+  font-weight: 700;
+  color: #1a1a1a;
+  position: relative;
+}
+.nav li a.active::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 3px;
+  height: 3px;
+  background-color: #1a1a1a;
+  border-radius: 100%;
+  transform: translateX(-50%);
+}
+
+/* desktop */
+@media screen and (min-width : 1024px) {
+  /* 4단 배열 */
+}
+
+/* tablet */
+@media screen and (max-width : 1023px) {
+  /* 2단 배열, 헤더 영역 1단 */
+  .inner{
+    width: 100%;
+  }
+  .HeaderTop{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 28px 0px 31px;
+    flex-direction: column;
+  }
+  .HeaderTop .logo img{
+    transform: scale(0.8);
+  }
+  .HeaderTop .logo i{
+    font-size: 25px;
+    margin-left: -30px;
+  }
+  .HeaderBottom .nav{
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .HeaderBottom .nav li a{
+    white-space: nowrap;
+  }
+  .snb{
+    margin-top: 1rem;
+  }
+}
+
+/* mobile */
+@media screen and (max-width : 540px) {
+  /* 2단 배열, 헤더 영역 1단 */
+  .HeaderBottom .nav li a{
+    font-size: 3vw;
+  }
+}
+

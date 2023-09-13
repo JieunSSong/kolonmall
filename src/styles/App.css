@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import url('https://webfontworld.github.io/sunn/SUIT.css');
+:root{
+  font-size: 15px;
+  font-family: 'SUIT';
+}
+.inner{
+  padding: 1rem 0;
+}
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+}
+.loginForm label,
+.loginForm input {
+  margin: 0.5rem;
+  width: 100%;
+}
+.loginForm button {
+  align-self: center;
+  width: 102%;
+  margin-bottom: 5rem;
+  margin-left: 1rem;
+  background-color: black;
+  color: #fff;
+  padding: .5rem 0;
+  cursor: pointer;
+}
